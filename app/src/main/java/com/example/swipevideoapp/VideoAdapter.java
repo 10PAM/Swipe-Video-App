@@ -65,7 +65,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         /**
          * Video UI Fields
          */
-        TextView textVideoTitle, textVideoDescription;
+        TextView textVideoTitle, textVideoDescription, textVideoID;
         VideoView videoView;
         ProgressBar progressBar;
 
@@ -77,6 +77,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             super(itemView);
             videoView = itemView.findViewById(R.id.videoView);
             textVideoTitle = itemView.findViewById(R.id.textVideoTitle);
+            textVideoID = itemView.findViewById(R.id.textVideoID);
             textVideoDescription = itemView.findViewById(R.id.textVideoDescription);
             progressBar = itemView.findViewById(R.id.videoProgressBar);
         }
@@ -87,6 +88,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
          */
         void setVideoData(VideoItem videoItem) {
             textVideoTitle.setText(videoItem.videoTitle);
+            textVideoID.setText(videoItem.videoID);
             textVideoDescription.setText(videoItem.videoDescription);
             videoView.setVideoPath(videoItem.videoURL);
             progressBar = itemView.findViewById(R.id.videoProgressBar);
@@ -109,7 +111,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                     if(scale >= 1f) {
                         videoView.setScaleX(scale);
                     } else {
-                        videoView.setScaleY(1f / scale);
+                        videoView.setScaleY(scale);
+                        videoView.setScaleX(scale);
                     }
                 }
             });

@@ -3,8 +3,8 @@
  *     Mario Aguilera Piceno
  * }
  * File: MainActivity.java
- * About: Manages the internal linking of files. Implemeentation base
- * on Professor Dr. Zhu's lectures for lab 2.
+ * About: Manages the internal linking of files and core logic of tbe app.
+ * Implementation is based on Professor Dr. Shangyue Zhu's lectures for lab 2.
  * Created: 10/10/2026
  * Modified: 10/10/2026
  */
@@ -28,6 +28,13 @@ import java.util.List;
  */
 public class MainActivity extends AppCompatActivity {
 
+
+    /**
+     * The container for the videos.
+     */
+    final private List<VideoItem> videoItemsList = new ArrayList<>();
+    ViewPager2 videoViewPager = null;
+
     /**
      * App initialization point.
      *
@@ -47,50 +54,26 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        final ViewPager2 videoViewPager = findViewById(R.id.videosViewPager);
+        videoViewPager = findViewById(R.id.videosViewPager);
 
-        List<VideoItem> videoItemsList = new ArrayList<>();
-
-        // Video 1
-        VideoItem v_cube = new VideoItem();
-        v_cube.videoURL = "https://github.com/10PAM/Swipe-Video-App/raw/refs/heads/master/videos/spinning_cube.mp4";
-        v_cube.videoTitle = "Celebration";
-        v_cube.videoDescription = "Celebration who you are in your deepest heart";
-        v_cube.videoID = "198324";
-        videoItemsList.add(v_cube);
-
-        // Video 2
-        VideoItem v_cube2 = new VideoItem();
-        v_cube2.videoURL = "https://github.com/10PAM/Swipe-Video-App/raw/refs/heads/master/videos/spinning_cube.mp4";
-        v_cube2.videoTitle = "Celebration";
-        v_cube2.videoDescription = "Celebration who you are in your deepest heart";
-        v_cube2.videoID = "198324";
-        videoItemsList.add(v_cube2);
-
-        // Video 3
-        VideoItem v_cube3 = new VideoItem();
-        v_cube3.videoURL = "https://github.com/10PAM/Swipe-Video-App/raw/refs/heads/master/videos/spinning_cube.mp4";
-        v_cube3.videoTitle = "Celebration";
-        v_cube3.videoDescription = "Celebration who you are in your deepest heart";
-        v_cube3.videoID = "198324";
-        videoItemsList.add(v_cube3);
-
-        // Video 4
-        VideoItem v_cube4 = new VideoItem();
-        v_cube4.videoURL = "https://github.com/10PAM/Swipe-Video-App/raw/refs/heads/master/videos/spinning_cube.mp4";
-        v_cube4.videoTitle = "Celebration";
-        v_cube4.videoDescription = "Celebration who you are in your deepest heart";
-        v_cube4.videoID = "198324";
-        videoItemsList.add(v_cube4);
-
-        // Video 5
-        VideoItem v_cube5 = new VideoItem();
-        v_cube5.videoURL = "https://github.com/10PAM/Swipe-Video-App/raw/refs/heads/master/videos/spinning_cube.mp4";
-        v_cube5.videoTitle = "Celebration";
-        v_cube5.videoDescription = "Celebration who you are in your deepest heart";
-        v_cube5.videoID = "198324";
-        videoItemsList.add(v_cube5);
+        addVideo("Spinning 3D Cube", "Video of progress for my game engine that I am working on as a hobby during my free time. Learning how to use a rendering library and how to apply it to my engine.", "198324");
+        addVideo("Lockscreen", "Vibe coding.", "168324");
+        addVideo("PC Part Boxes", "Storing my valuable boxes!", "138322");
+        addVideo("Programmig Books", "My library...", "128327");
+        addVideo("Swipe App", "An overview of this app.", "108321");
 
         videoViewPager.setAdapter(new VideoAdapter(videoItemsList));
+    }
+
+    /**
+     * Adds a video dynamically
+     */
+    void addVideo(String title, String description, String id) {
+        VideoItem video = new VideoItem();
+        video.videoURL = "https://github.com/10PAM/Swipe-Video-App/raw/refs/heads/master/videos/"+id+".mp4";
+        video.videoTitle = title;
+        video.videoDescription = description;
+        video.videoID = "ID: "+id;
+        videoItemsList.add(video);
     }
 }
