@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHolder> {
 
-    private List<VideoItem> videoItems;
+    final private List<VideoItem> videoItems;
 
     public VideoAdapter(List<VideoItem> videoItems) {
         this.videoItems = videoItems;
@@ -29,7 +29,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
      * @param parent   The ViewGroup into which the new View will be added after it is bound to
      *                 an adapter position.
      * @param viewType The view type of the new View.
-     * @return
+     * @return Returns something
      */
     @NonNull
     @Override
@@ -50,7 +50,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
 
     /**
      *
-     * @return
+     * @return Returns
      */
     @Override
     public int getItemCount() {

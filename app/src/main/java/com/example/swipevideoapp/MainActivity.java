@@ -52,11 +52,44 @@ public class MainActivity extends AppCompatActivity {
         List<VideoItem> videoItemsList = new ArrayList<>();
 
         // Video 1
-        VideoItem videoCelebration = new VideoItem();
-        videoCelebration.videoURL = "https://github.com/10PAM/Swipe-Video-App/raw/refs/heads/master/videos/spinning_cube.mp4";
-        videoCelebration.videoTitle = "Celebration";
-        videoCelebration.videoDescription = "Celebration who you are in your deepest heart";
-        videoItemsList.add(videoCelebration);
+        VideoItem v_cube = new VideoItem();
+        v_cube.videoURL = "https://github.com/10PAM/Swipe-Video-App/raw/refs/heads/master/videos/spinning_cube.mp4";
+        v_cube.videoTitle = "Celebration";
+        v_cube.videoDescription = "Celebration who you are in your deepest heart";
+        v_cube.videoID = "198324";
+        videoItemsList.add(v_cube);
+
+        // Video 2
+        VideoItem v_cube2 = new VideoItem();
+        v_cube.videoURL = "https://github.com/10PAM/Swipe-Video-App/raw/refs/heads/master/videos/spinning_cube.mp4";
+        v_cube.videoTitle = "Celebration";
+        v_cube.videoDescription = "Celebration who you are in your deepest heart";
+        v_cube.videoID = "198324";
+        videoItemsList.add(v_cube);
+
+        // Video 3
+        VideoItem v_cube3 = new VideoItem();
+        v_cube.videoURL = "https://github.com/10PAM/Swipe-Video-App/raw/refs/heads/master/videos/spinning_cube.mp4";
+        v_cube.videoTitle = "Celebration";
+        v_cube.videoDescription = "Celebration who you are in your deepest heart";
+        v_cube.videoID = "198324";
+        videoItemsList.add(v_cube);
+
+        // Video 4
+        VideoItem v_cube4 = new VideoItem();
+        v_cube.videoURL = "https://github.com/10PAM/Swipe-Video-App/raw/refs/heads/master/videos/spinning_cube.mp4";
+        v_cube.videoTitle = "Celebration";
+        v_cube.videoDescription = "Celebration who you are in your deepest heart";
+        v_cube.videoID = "198324";
+        videoItemsList.add(v_cube);
+
+        // Video 5
+        VideoItem v_cube5 = new VideoItem();
+        v_cube.videoURL = "https://github.com/10PAM/Swipe-Video-App/raw/refs/heads/master/videos/spinning_cube.mp4";
+        v_cube.videoTitle = "Celebration";
+        v_cube.videoDescription = "Celebration who you are in your deepest heart";
+        v_cube.videoID = "198324";
+        videoItemsList.add(v_cube);
 
         videoViewPager.setAdapter(new VideoAdapter(videoItemsList));
     }

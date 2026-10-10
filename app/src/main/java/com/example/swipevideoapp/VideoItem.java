@@ -5,6 +5,6 @@ package com.example.swipevideoapp;
  * Handles video data and inserts into app.
  */
 public class VideoItem {
-    public String videoURL, videoTitle, videoDescription;
+    public String videoURL, videoTitle, videoDescription, videoID;
 
 }
