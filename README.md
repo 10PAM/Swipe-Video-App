@@ -18,5 +18,5 @@
 <a href="https://www.youtube.com/watch?v=isvWAGl1zJE"><img width="300" height="600" alt="Screenshot 4" src="https://github.com/10PAM/Swipe-Video-App/blob/54e7dc0b908a2f4987afe87f808c746234dd0dc6/screenshots/screenshot_3.jpg"></a>
 
 ### DEMO (Video):
-<video src="https://github.com/user-attachments/assets/5ccdbda6-eeba-415b-be48-0398d08f73ec" controls width="100%"></video>
+<video src="https://github.com/user-attachments/assets/5ccdbda6-eeba-415b-be48-0398d08f73ec" controls width="200"></video>
 <a href="https://youtu.be/wh2tlXoDIIw">( Video With Better Quality Link )</a>
