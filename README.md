@@ -9,7 +9,7 @@
 <a href="https://www.youtube.com/watch?v=isvWAGl1zJE"><img width="300" height="600" alt="Screenshot 2" src="https://github.com/10PAM/Swipe-Video-App/blob/54523de12f90048f544f2d1240c9e298f6df25b0/screenshots/screenshot_0.jpg"></a>
 
 ### Screenshot 2 (Video 2):
-<a href="https://www.youtube.com/watch?v=isvWAGl1zJE"><img width="300" height="600" alt="Screenshot 1" src="screenshots/screenshot_1.jpg"></a>
+<a href="https://www.youtube.com/watch?v=isvWAGl1zJE"><img width="300" height="600" alt="Screenshot 1" src="https://github.com/10PAM/Swipe-Video-App/blob/857c00f3034d5359d2686f7537d5a58b96ccd7b1/screenshots/screenshot_1.jpg"></a>
 
 ### Screenshot 3 (Video 3):
 <a href="https://www.youtube.com/watch?v=isvWAGl1zJE"><img width="300" height="600" alt="Screenshot 2" src="screenshots/screenshot_2.jpg"></a>
