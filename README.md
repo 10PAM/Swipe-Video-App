@@ -20,4 +20,7 @@
 ### DEMO (Video):
 https://github.com/user-attachments/assets/5ccdbda6-eeba-415b-be48-0398d08f73ec
 <video src="https://github.com/user-attachments/assets/5ccdbda6-eeba-415b-be48-0398d08f73ec"></video>
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/5ccdbda6-eeba-415b-be48-0398d08f73ec" width="500px"></video>
+</p>
 <a href="https://youtu.be/wh2tlXoDIIw">( Video With Better Quality Link )</a>
