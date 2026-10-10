@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--Allows app to utilize external internet resources-->
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application

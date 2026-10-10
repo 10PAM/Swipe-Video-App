@@ -1,3 +1,14 @@
+/**
+ * Programmers {
+ *     Mario Aguilera Piceno
+ * }
+ * File: MainActivity.java
+ * About: Manages the internal linking of files. Implemeentation base
+ * on Professor Dr. Zhu's lectures for lab 2.
+ * Created: 10/10/2026
+ * Modified: 10/10/2026
+ */
+
 package com.example.swipevideoapp;
 
 import android.os.Bundle;
@@ -39,8 +50,10 @@ public class MainActivity extends AppCompatActivity {
         final ViewPager2 videoViewPager = findViewById(R.id.videosViewPager);
 
         List<VideoItem> videoItemsList = new ArrayList<>();
+
+        // Video 1
         VideoItem videoCelebration = new VideoItem();
-        videoCelebration.videoURL = "https://github.com/10PAM/Swipe-Video-App/blob/master/videos/spinning_cube.mp4";
+        videoCelebration.videoURL = "https://github.com/10PAM/Swipe-Video-App/raw/refs/heads/master/videos/spinning_cube.mp4";
         videoCelebration.videoTitle = "Celebration";
         videoCelebration.videoDescription = "Celebration who you are in your deepest heart";
         videoItemsList.add(videoCelebration);

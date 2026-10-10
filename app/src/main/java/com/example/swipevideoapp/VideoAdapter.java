@@ -100,6 +100,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                 @Override
                 public void onPrepared(MediaPlayer mp) {
                     progressBar.setVisibility(View.GONE);
+                    mp.start();
 
                     float videoRatio = mp.getVideoWidth() / (float)mp.getVideoHeight();
                     float screenRatio = videoView.getWidth() / (float)videoView.getHeight();
