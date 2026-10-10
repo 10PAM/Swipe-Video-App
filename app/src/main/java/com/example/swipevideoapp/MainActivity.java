@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The entry point of the app's logic.
+ * The entry point of the app's implemented logic.
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager2 videoViewPager = null;
 
     /**
-     * App initialization point.
+     * App initialization point on start.
      *
      * @param savedInstanceState If the activity is being re-initialized after
      *     previously being shut down then this Bundle contains the data it most
@@ -62,11 +62,12 @@ public class MainActivity extends AppCompatActivity {
         addVideo("Programmig Books", "My library...", "128327");
         addVideo("Swipe App", "An overview of this app.", "108321");
 
+        // Initializes video pager with created videos
         videoViewPager.setAdapter(new VideoAdapter(videoItemsList));
     }
 
     /**
-     * Adds a video dynamically
+     * Adds a video modularly.
      */
     void addVideo(String title, String description, String id) {
         VideoItem video = new VideoItem();

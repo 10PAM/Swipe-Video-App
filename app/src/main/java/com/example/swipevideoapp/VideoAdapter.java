@@ -18,26 +18,37 @@ import java.util.List;
  */
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHolder> {
 
+    /**
+     * List for storing all created video items.
+     */
     final private List<VideoItem> videoItems;
 
+    /**
+     * Constructor for the VideoAdapter.
+     *
+     * @param videoItems Instantiates videoItems upon creation.
+     */
     public VideoAdapter(List<VideoItem> videoItems) {
         this.videoItems = videoItems;
     }
 
     /**
+     * Creates a VideoViewHolder object to contain videos in.
      *
      * @param parent   The ViewGroup into which the new View will be added after it is bound to
      *                 an adapter position.
      * @param viewType The view type of the new View.
-     * @return Returns something
+     * @return Returns a created VideoViewHolder object.
      */
     @NonNull
     @Override
     public VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new VideoViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_container_video, parent, false));
+        return new VideoViewHolder(LayoutInflater.from(parent.getContext()).inflate(
+                R.layout.item_container_video, parent, false));
     }
 
     /**
+     * Gets all videos and applies them to the vieew holder for playback.
      *
      * @param holder   The ViewHolder which should be updated to represent the contents of the
      *                 item at the given position in the data set.
@@ -50,7 +61,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
 
     /**
      *
-     * @return Returns
+     * @return Returns the total amount of video's contained in storage.
      */
     @Override
     public int getItemCount() {
@@ -58,7 +69,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
     }
 
     /**
-     *
+     * Optimizes video scrolling using the RecyclerView's ViewHolder class.
      */
     static class VideoViewHolder extends RecyclerView.ViewHolder{
 
@@ -70,7 +81,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         ProgressBar progressBar;
 
         /**
-         * Static class that
+         * Constructs the video view holder.
+         *
          * @param itemView Compare
          */
         public VideoViewHolder(@NonNull View itemView) {
@@ -84,6 +96,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
 
         /**
          * Handles instantiation and updating of all video data.
+         *
          * @param videoItem Compares
          */
         void setVideoData(VideoItem videoItem) {
@@ -96,6 +109,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
 
                 /**
+                 * Starts MediaPlayer when loaded for video watching.
                  *
                  * @param mp the MediaPlayer that is ready for playback
                  */
@@ -104,15 +118,10 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                     progressBar.setVisibility(View.GONE);
                     mp.start();
 
-                    // Compresses video's scale by its ratio for optimal viewing
+                    // Sets up scaling for video
                     float videoRatio = (float)mp.getVideoWidth() / (float)mp.getVideoHeight();
                     float screenRatio = (float)videoView.getWidth() / (float)videoView.getHeight();
                     float scale = videoRatio / screenRatio;
-                    if(scale >= 1f) {
-
-                    } else {
-
-                    }
                     videoView.setScaleX(scale);
                     videoView.setScaleY(1f);
                     videoView.setX(1f);
@@ -121,9 +130,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             });
 
             videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-
                 /**
-                 *
+                 * Restarts video when a video ends.
                  *
                  * @param mp the MediaPlayer that reached the end of the file
                  */

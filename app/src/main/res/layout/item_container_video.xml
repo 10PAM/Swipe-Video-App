@@ -6,6 +6,7 @@
     android:background="@color/black"
     android:layout_gravity="center">
 
+    <!--Video View Container-->
     <VideoView
         android:id="@+id/videoView"
         android:layout_width="match_parent"
@@ -15,6 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
+    <!--Video Progress Bar Showcase-->
     <ProgressBar
         android:id="@+id/videoProgressBar"
         android:layout_width="50dp"
@@ -26,55 +28,66 @@
         app:layout_constraintStart_toStartOf="parent"/>
 
     <!--Video Details-->
-    <LinearLayout
+    <ScrollView
         android:id="@+id/verticalLayoutVideo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:orientation="vertical"
         android:layout_margin="5dp"
+        android:foregroundGravity="center"
+        android:background="@color/description"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <!--Video Details Container-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <!--Video Title-->
-            <TextView
-                android:id="@+id/textVideoTitle"
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:paddingStart="5dp"
-                android:paddingTop="5dp"
-                android:paddingEnd="5dp"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:textStyle="bold"/>
+            <!--Side by Side: Title and ID-->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <!--Video ID-->
+                <!--Video Title-->
+                <TextView
+                    android:id="@+id/textVideoTitle"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+
+                <!--Video ID-->
+                <TextView
+                    android:id="@+id/textVideoID"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAlignment="textEnd"/>
+            </GridLayout>
+
+            <!--Video Description-->
             <TextView
-                android:id="@+id/textVideoID"
-                android:layout_width="120dp"
+                android:id="@+id/textVideoDescription"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="5dp"
                 android:paddingTop="5dp"
                 android:paddingEnd="5dp"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:textAlignment="textEnd"/>
-        </GridLayout>
+                android:textStyle="bold"/>
+        </LinearLayout>
 
-        <!--Video Description-->
-        <TextView
-            android:id="@+id/textVideoDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="5dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="5dp"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
