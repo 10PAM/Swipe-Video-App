@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         videoViewPager = findViewById(R.id.videosViewPager);
 
         addVideo("Spinning 3D Cube", "Video of progress for my game engine that I am working on as a hobby during my free time. Learning how to use a rendering library and how to apply it to my engine.", "198324");
-        addVideo("Lockscreen", "Vibe coding.", "168324");
+        addVideo("Lockscreen", "Vibe coding. This is a long description made for testing the scroll field and showing its usefulness when it comes to creating multi-long video descriptions for specific videos. It can scroll throughout the video details for this purpose.", "168324");
         addVideo("PC Part Boxes", "Storing my valuable boxes!", "138322");
         addVideo("Programmig Books", "My library...", "128327");
         addVideo("Swipe App", "An overview of this app.", "108321");

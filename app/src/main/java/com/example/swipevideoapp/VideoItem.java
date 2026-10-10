@@ -1,8 +1,7 @@
 package com.example.swipevideoapp;
 
 /**
- * Primary video handling class.
- * Handles video data and inserts into app.
+ * Video data class. Contains all non-media video information.
  */
 public class VideoItem {
     public String videoURL, videoTitle, videoDescription, videoID;
