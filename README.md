@@ -20,3 +20,5 @@
 ### DEMO (Video):
 https://github.com/user-attachments/assets/5ccdbda6-eeba-415b-be48-0398d08f73ec
 <a href="https://youtu.be/wh2tlXoDIIw">( Video With Better Quality Link )</a>
+[![Watch the video](https://youtube.com)](https://youtu.be/wh2tlXoDIIw)
+
