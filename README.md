@@ -6,7 +6,7 @@
 ##### Allows for swiping up and down for multiple video playback. Includes a scrollable description field that contains the video data on it.
 
 ### Screenshot 1 (App Icon):
-<a href="https://www.youtube.com/watch?v=isvWAGl1zJE"><img width="300" height="600" alt="Screenshot 2" src="https://github.com/user-attachments/assets/47f881fa-d146-4a0c-976c-8845165eedd3"></a>
+<a href="https://www.youtube.com/watch?v=isvWAGl1zJE"><img width="300" height="600" alt="Screenshot 2" src="screenshots/screenshot_0.jpg"></a>
 
 ### Screenshot 2 (Video 2):
 <a href="https://www.youtube.com/watch?v=isvWAGl1zJE"><img width="300" height="600" alt="Screenshot 1" src="https://github.com/user-attachments/assets/736977e6-8a97-4d26-83aa-7b6dc66bc98b"></a>
